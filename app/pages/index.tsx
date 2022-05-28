@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import { Button } from "ui";
+import { Button, Logo } from "ui";
 
 const Home: NextPage = () => {
   const onClick = () => {
@@ -18,11 +18,16 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
+        <Logo className={styles.logo} />
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
-        <Button onClick={onClick}>Design system Button</Button>
+        <div className={styles.grid}>
+          <p>
+            <Button onClick={onClick}>Design system Button</Button>
+          </p>
+        </div>
       </main>
 
       <footer className={styles.footer}>
